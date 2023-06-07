@@ -24,9 +24,10 @@ line-height: 1.4rem;
 .movielogoname
 {display: flex;
     width: 142.28px;
+    
 height: 22px;
 gap: 20px;
-font-family: 'Open Sans';
+font-family: "Roboto",sans-serif;
 font-style: normal;
 font-weight: 800;
 font-size: 16px;
@@ -104,6 +105,7 @@ color: red;
 .main-nav{
 justify-content: space-between;
 padding: 8px;
+
 }
 .search-bar{
 height: 32px;
@@ -150,7 +152,7 @@ margin-left: 200px;
 }
 .cards-container
 {
-justify-content:space-around; 
+/*justify-content:space-around; */
 flex-wrap: wrap;
 gap: 10px;
 
@@ -160,8 +162,8 @@ gap: 10px;
 }
 .card{
 
-
-width: 300px;
+    
+width: 350px;
 margin-left: 10px;
 text-align: center;
  box-shadow: 0 0 4px #d4ecff;
@@ -180,7 +182,9 @@ flex-grow: 1;
  transform: translateY(-2px);
 }
 .card-header img
+
 {
+  
 width: 100%;
 height: 100%;
 object-fit: cover;
@@ -213,16 +217,35 @@ margin-top: 200px;
 margin-bottom: 70px;
 
 }
-@media (max-width: 480px) {
+#add:hover{
+    background-color: var(--accent-color-dark);
+
+}
+@media (max-width: 960px) {
+    .card {
+      width: 230px;
+    }
+  }
+@media (max-width: 700px) {
     /* Adjust the styles for screens smaller than or equal to 768px */
+    main{
+      
+       margin-top: 60px;
+     margin-left: 0px;
+  
+    }
     .list {
-      width: 150px;
-      padding: 8px;
-      gap: 8px;
-      flex-direction: column;
+      width: 100%;
+      height: 40px;
+      flex-direction: row;
       justify-content: space-around;
       align-items: center;
       overflow-x: auto;
+      line-height: 0.5em;
+    text-size-adjust: 0.5em;
+    
+    
+
     }
 
     .list li {
@@ -231,11 +254,49 @@ margin-bottom: 70px;
     .movie-name{
         width: 100px;
     }
-  
-  
+    .card {
+        width: 40%;
+      
+        margin-left: 0px;
+        
+      }
+      #searchresults{
+        
+      width: fit-content;
+    border:0px;
+
     
-  }@media (max-width: 960px) {
-  .card {
-    width: 250px;
+      }
+      .cards-container{
+        margin-top: 50px;
+       margin-left: 0px;
+       flex-wrap: wrap;
+     
+        
+      }
+  #add{
+    margin-top: 70px;
   }
+ 
+    
 }
+@media (max-width:642px) {
+
+
+  .list {
+    font-weight: 700;
+      width: 100%;
+      height: 40px;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      overflow-x: auto;
+      line-height: 0.5em;
+    text-size-adjust: 0.5em;
+    font-size: 10px;
+    
+
+    }
+}
+
+  
